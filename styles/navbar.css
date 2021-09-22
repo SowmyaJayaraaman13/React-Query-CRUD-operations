@@ -1,0 +1,15 @@
+.navbar_wrapper{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    color: white;
+}
+
+.navbar_link_wrapper{
+    padding: 0 30px;
+}
+
+.navbar_right{
+    display: flex;
+}

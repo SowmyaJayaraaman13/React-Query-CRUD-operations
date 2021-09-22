@@ -1,0 +1,33 @@
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.form_wrapper > button{
+    margin-top: 10px;
+}
+
+
+.form_field{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 8px;
+}
+
+.form_field > label{
+    margin-bottom: 5px;
+}
+
+.form_wrapper > button{
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+}
