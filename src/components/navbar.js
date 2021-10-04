@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Navbar() {
     return (
         <div className="navbar_wrapper">
-            <div style={{ width: '75%', paddingLeft: '10%' }}>
+            <div style={{ width: '65%', paddingLeft: '10%' }}>
                 <Link href='/'>Next - React Query</Link>
             </div>
             <div className="navbar_right">
@@ -14,6 +14,9 @@ function Navbar() {
                 </div>
                 <div className="navbar_link_wrapper">
                     <Link href='/user_list'>Users List</Link>
+                </div>
+                <div className="navbar_link_wrapper">
+                    <Link href='/cascading'>Cascading</Link>
                 </div>
             </div>
         </div>

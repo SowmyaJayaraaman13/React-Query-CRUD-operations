@@ -11,7 +11,7 @@ function Userlist() {
     const { data, isLoading, isFetching, isError, refetch } = useQuery(["userList"], getUserList, {
         retry: 4,
         retryDelay: 2000,
-        refetchOnWindowFocus: false,
+        refetchOnWindowFocus: true
     })
 
 
