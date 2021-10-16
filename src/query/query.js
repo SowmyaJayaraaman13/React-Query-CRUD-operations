@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-export const getUserList = async () => {
-    const result = await axios.get('http://localhost:3000/api/helper')
+export const getUserList = async ({pageParam = 1}) => {
+    console.log(pageParam)
+    const result = await axios.get(`http://localhost:3000/api/helper?page=${pageParam}`)
     return result.data
 }
 
@@ -26,4 +27,13 @@ export const getUserById = async ({queryKey}) => {
 
 export const updateUserById = async(param) => {
     const result = await axios.put(`http://localhost:3000/api/helper/${param.id}`, param.body)
+}
+
+export const defaultQueryFn = async({queryKey}) => {
+    await new Promise(r => setTimeout(r, 1000))
+    if(queryKey[0]){
+        const result = await axios.get(`https://jsonplaceholder.typicode.com${queryKey[0]}`)
+        return result.data
+    }
+    
 }
